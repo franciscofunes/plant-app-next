@@ -44,7 +44,7 @@ export async function getStaticPaths() {
 
   // tell the router about our static paths
   // fallback to `fallback: false` if you want 404s instead of redirecting
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps(context) {
