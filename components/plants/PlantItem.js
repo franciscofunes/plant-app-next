@@ -11,7 +11,7 @@ function PlantItem(props) {
   }
 
   function showWateringHandler() {
-    router.push('/watering');
+    router.push('/new-water');
   }
 
   return (
