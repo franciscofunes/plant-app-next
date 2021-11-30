@@ -14,6 +14,9 @@ web_modules/
 # next config file
 next.config.js
 
+# pkg lock file
+package-lock.json
+
 # Optional eslint cache
 .eslintcache
 

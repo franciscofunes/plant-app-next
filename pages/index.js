@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 import Head from "next/head";
-import PlantList from "../components/meetups/PlantList";
+import PlantList from "../components/plants/PlantList";
 
 function HomePage(props) {
   return (
@@ -14,7 +14,7 @@ function HomePage(props) {
           content="initial-scale=1.0, width=device-width"
         />
       </Head>
-      <PlantList plants={props.plants} />
+      <PlantList plants={props.plants} water={props.watering} />
     </>
   );
 }
@@ -32,12 +32,23 @@ export async function getStaticProps() {
   const client = await MongoClient.connect(
     `mongodb+srv://francisco:${DB_KEY}@cluster0.e9tyv.mongodb.net/plants?retryWrites=true&w=majority`
   );
+
+  const clientWater = await MongoClient.connect(
+    `mongodb+srv://francisco:${DB_KEY}@cluster0.e9tyv.mongodb.net/watering?retryWrites=true&w=majority`
+  );
+
   const db = client.db();
+
+  const dbWater = clientWater.db();
 
   // collections equal tables in a relational database
   const plantsCollection = db.collection("plants");
 
   const plants = await plantsCollection.find().toArray();
+
+  const waterCollection = dbWater.collection("watering");
+
+  const watering = await waterCollection.find().toArray();
 
   client.close();
 
@@ -48,6 +59,15 @@ export async function getStaticProps() {
         title: plant.title,
         image: plant.image,
         family: plant.family,
+      })),
+      watering: watering.map((water) => ({
+        id: water._id.toString(),
+        idPlant: water.idPlant,
+        date: water.date,
+        fertilize: water.fertilize,
+        water: water.water,
+        state: water.state,
+        observations: water.observations,
       })),
     },
     //property for revalidating props, number of seconds for regenerating static page

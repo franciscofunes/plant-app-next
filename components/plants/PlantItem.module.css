@@ -31,16 +31,23 @@
 }
 
 .actions button {
+  margin-right: 0.5rem;
   font: inherit;
   cursor: pointer;
   color: #69cc30;
   border: 1px solid #69cc30;
   background-color: transparent;
-  padding: 0.5rem 1.0rem;
-  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 .actions button:hover,
 .actions button:active {
-  background-color: #dfffd5;
+  background-color: #f7f7f7;
 }
+
+.actions button:last-child {
+  color: #3f5fee;
+  border: 1px solid #3f5fee;
+}
+

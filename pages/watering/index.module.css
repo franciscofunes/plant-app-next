@@ -1,0 +1,52 @@
+.container {
+  overflow-x: auto;
+}
+
+.container button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font: inherit;
+  cursor: pointer;
+  color: #30adcc;
+  border: 1px solid #30adcc;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.container button:hover,
+.container button:active {
+  background-color: #f7f7f7;
+}
+
+.container button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table tr {
+  background-color: #f2fcff;
+  border: 1px solid #f2fcff;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.table th,
+.table td {
+  padding: 0.625em;
+  text-align: left;
+}
+
+.table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

@@ -10,6 +10,10 @@ function PlantItem(props) {
     router.push('/' + props.id);
   }
 
+  function showWateringHandler() {
+    router.push('/watering');
+  }
+
   return (
     <li className={classes.item}>
       <Card>
@@ -21,7 +25,8 @@ function PlantItem(props) {
           <p>{props.family}</p>
         </div>
         <div className={classes.actions}>
-          <button onClick={showPlantHandler}>Ver planta</button>
+          <button onClick={showPlantHandler}>Historia</button>
+          <button onClick={showWateringHandler}>Regar</button>
         </div>
       </Card>
     </li>

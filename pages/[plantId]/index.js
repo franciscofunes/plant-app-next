@@ -1,8 +1,9 @@
 import { MongoClient, ObjectId } from "mongodb";
 import Head from "next/head";
-import PlantPage from "../../components/meetups/PlantPage";
+import PlantPage from "../../components/plants/PlantPage";
 
 const PlantPages = (props) => {
+  console.log(props.plantData.id);
   return (
     <>
       <Head>
@@ -43,7 +44,7 @@ export async function getStaticPaths() {
   }));
 
   // tell the router about our static paths
-  // fallback to `fallback: false` if you want 404s instead of redirecting
+  // fallback to / if no plantId is found
   return { paths, fallback: 'blocking' };
 }
 
