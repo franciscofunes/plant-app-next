@@ -23,7 +23,7 @@ function NewWaterForm(props) {
     const enteredFertilize = fertilizerInputRef.current.value;
     const enteredState = stateInputRef.current.value;
     const enteredObservations = observationsInputRef.current.value;
-    const enteredFertilizerName = fertilizerInputRef.current.value;
+    const enteredFertilizerName = fertilizerNameInputRef.current.value;
 
 
     const plantWater = {

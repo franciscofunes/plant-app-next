@@ -25,7 +25,7 @@ export default function Watering({ wateringRecords }) {
               <td>{watering.plantName}</td>
               <td>{watering.date}</td>
               <td>{watering.water} ml</td>
-              <td>{watering.fertilizeName} ml</td>
+              <td>{watering.fertilizeName}</td>
               <td>{watering.fertilize} ml</td>
               <td>{watering.state}</td>
               <td>{watering.observations}</td>
