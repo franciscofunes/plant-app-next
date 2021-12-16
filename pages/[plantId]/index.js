@@ -3,7 +3,7 @@ import Head from "next/head";
 import PlantPage from "../../components/plants/PlantPage";
 
 const PlantPages = (props) => {
-  console.log(props.plantData.id);
+  // console.log(props.plantData.id);
   return (
     <>
       <Head>

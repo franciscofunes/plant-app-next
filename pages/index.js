@@ -62,7 +62,7 @@ export async function getStaticProps() {
       })),
       watering: watering.map((water) => ({
         id: water._id.toString(),
-        idPlant: water.idPlant,
+        plantName: water.plantName,
         date: water.date,
         fertilize: water.fertilize,
         water: water.water,

@@ -9,9 +9,10 @@ export default function Watering({ wateringRecords }) {
       <table className={classes.table}>
         <thead>
           <tr>
-            <th>ID Planta</th>
+            <th>Nombre Planta</th>
             <th>Fecha</th>
             <th>Vol. Agua</th>
+            <th>Nombre Fertilizante</th>
             <th>Vol. Fertilizante</th>
             <th>Estado</th>
             <th>Observaciones</th>
@@ -21,9 +22,10 @@ export default function Watering({ wateringRecords }) {
         <tbody>
           {wateringRecords.map((watering) => (
             <tr>
-              <td>{watering.idPlant}</td>
+              <td>{watering.plantName}</td>
               <td>{watering.date}</td>
               <td>{watering.water} ml</td>
+              <td>{watering.fertilizeName} ml</td>
               <td>{watering.fertilize} ml</td>
               <td>{watering.state}</td>
               <td>{watering.observations}</td>

@@ -20,7 +20,7 @@ async function handleRequest(req, res) {
 
     const result = await plantCollection.insertOne(data);
 
-    console.log(result);
+    // console.log(result);
 
     client.close();
 
